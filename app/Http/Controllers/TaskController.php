@@ -50,15 +50,15 @@ class TaskController extends Controller
 
         $task->update($validated);
 
-        return redirect()->route('tasks.index')
-            ->with('success', 'Task updated successfully!');
+        return redirect('/tasks')
+    ->with('success', 'Task updated successfully!');
     }
 
     public function destroy(Task $task)
-    {
-        $task->delete();
+{
+    $task->delete();
 
-        return redirect()->route('tasks.index')
-            ->with('success', 'Task deleted successfully!');
-    }
+    return redirect('/tasks')
+        ->with('success', 'Task deleted successfully!');
+}
 }

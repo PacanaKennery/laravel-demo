@@ -38,9 +38,9 @@
                     <td>
                         <a href="/tasks/{{ $task->id }}/edit">Edit</a>
 
-                        <form action="{{ route('tasks.destroy', $task) }}"
-                              method="POST"
-                              style="display:inline;">
+                        <form action="/tasks/{{ $task->id }}"
+      method="POST"
+      style="display:inline;">
                             @csrf
                             @method('DELETE')
 

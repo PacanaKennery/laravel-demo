@@ -8,8 +8,6 @@
     <h1>Edit Task</h1>
 
     <form action="/tasks/{{ $task->id }}" method="POST">
-    @csrf
-    @method('PUT')
         @csrf
         @method('PUT')
 
@@ -53,7 +51,7 @@
 
     <br>
 
-    <a href="{{ route('tasks.index') }}">Back to Tasks</a>
+    <a href="/tasks">Back to Tasks</a>
 
 </body>
 </html>
