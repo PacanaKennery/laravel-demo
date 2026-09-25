@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TaskController;
 
-Route::get('/students', [StudentController::class, 'index']);
+// imong existing Student/Subject routes diri...
 
-Route::get('/subjects', [SubjectController::class, 'index']);
+Route::resource('tasks', TaskController::class);
