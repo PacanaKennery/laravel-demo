@@ -6,8 +6,10 @@
 <body>
 
     <h1>Student Page</h1>
+    <a href="/subjects">View Subjects</a>
+<br><br>
 
-    <table border="1" cellpadding="10">
+    <table border="1">
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -15,12 +17,13 @@
         </tr>
 
         @foreach ($students as $student)
-            <tr>
-                <td>{{ $student->id }}</td>
-                <td>{{ $student->name }}</td>
-                <td>{{ $student->email }}</td>
-            </tr>
+        <tr>
+            <td>{{ $student->id }}</td>
+            <td>{{ $student->name }}</td>
+            <td>{{ $student->email }}</td>
+        </tr>
         @endforeach
+
     </table>
 
 </body>
